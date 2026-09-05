@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: opencloud
+  namespace: opencloud
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: "opencloud.example.com"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: opencloud
+                port:
+                  number: 9200
+

@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: opencloud-config
+  namespace: opencloud
+data:
+  OC_URL: https://opencloud.example.com
+  OC_CONFIG_DIR: /var/lib/opencloud/config
+  OC_BASE_DATA_PATH: /var/lib/opencloud/data
+  OC_INSECURE: "true"
+  OC_ENABLE_OCM: "false"
+  OC_EXCLUDE_RUN_SERVICES: ocm
+  PROXY_HTTP_ADDR: 0.0.0.0:9200
+  PROXY_TLS: "false"
+  PROXY_DEBUG_ADDR: 0.0.0.0:9205
+  STORAGE_USERS_DRIVER: decomposeds3
+  STORAGE_USERS_DECOMPOSEDS3_ENDPOINT: https://s3.example.com
+  STORAGE_USERS_DECOMPOSEDS3_REGION: example-region
+  STORAGE_USERS_DECOMPOSEDS3_BUCKET: opencloud-bucket
+
