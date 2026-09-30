@@ -1,6 +1,6 @@
 # OpenCloud FileServer
 
-Kubernetes deployment for a standalone OpenCloud server.
+Kubernetes deployment for OpenCloud
 
 - One OpenCloud pod: `opencloudeu/opencloud:7.2.4`
 - `opencloud-init` Job
